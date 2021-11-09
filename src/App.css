@@ -1,38 +1,109 @@
 .App {
-  text-align: center;
+  background-color:#F4F6FC;
+  color: #2E384D;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  padding: 0 7rem;
+  margin-bottom: 20px;
+  line-height: 10px;
+}
+.buttons>*{
+  width:11rem;
+  padding-left: 1rem;
+}
+h2{
+  font-size:40px;
+  font-weight: 400;
+}
+h1{
+  font-weight: 300;
+}
+.chart_container{
+  background-color: white;
+  margin-bottom: 50px;
+  box-shadow: 0 0 10px 1px #c9c9c9;
+
+}
+.chart{
+  position: relative;
+  bottom: -30px;
+}
+
+.filterContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.filter_area{
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+}
+.filter_input{
+  line-height: 2rem;
+  border: 1px #2E5BFF solid;
+  border-radius: 3px;
+}
+.filter_button{
+  text-align: left;
+  font-size: large;
+  margin-left: 8px;
+  line-height: 2rem;
+  width: 10rem;
+  border: 1px #2E5BFF solid;
+  background-color: #2E5BFF;
+  color: white;
+  border-radius: 3px;
+}
+.filter_button:hover{
+  background-color: #5277fd;
+  border: none;
+}
+
+.price_button{
+  background-color: #2E5BFF;
+  color: white;
+
+}
+.percent_button{
+  background-color: #F7C137;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.time_button{
+  background-color: #8C54FF;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tablehead{
+  color: #B0BAC9;
+  display: flex;
+  padding-left: 20px;
+
+}
+.tablehead p{
+  width: 10rem;
+  padding-left: 10px;
+
+}
+
+#id_data{
+ color: #707580;
+}
+
+.data_rows{
+  display: flex;
+  background-color: #fff;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.data_rows p{
+  width: 10rem;
+  padding-left: 10px;
+}
+
+.data_body{
+  margin-bottom: 50px;
 }
