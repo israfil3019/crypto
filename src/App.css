@@ -1,109 +1,172 @@
 .App {
-  background-color:#F4F6FC;
-  color: #2E384D;
-}
-.buttons{
-  display: flex;
-  justify-content: space-around;
-  padding: 0 7rem;
-  margin-bottom: 20px;
-  line-height: 10px;
-}
-.buttons>*{
-  width:11rem;
-  padding-left: 1rem;
-}
-h2{
-  font-size:40px;
+  background-color: #f4f6fc;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 1590px;
 }
-h1{
+.dashboard {
+  width: 141px;
+  height: 33px;
+  font-size: 28px;
+  font-weight: 300;
+  color: #2e384d;
+}
+.buttons {
+  width: 849px;
+  height: 117px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.buttons > * {
+  width: 264px;
+  height: 117px;
+}
+
+.price_button_container {
+  background-color: #2e5bff;
+  color: white;
+}
+.percent_button_container {
+  background-color: #f7c137;
+  color: white;
+}
+
+.time_button_container {
+  background-color: #8c54ff;
+  color: white;
+}
+.price_button {
+  width: 216px;
+  height: 77px;
+  margin: 20px auto;
+}
+.percent_button {
+  width: 216px;
+  height: 77px;
+  margin: 20px auto;
+}
+.time_button {
+  width: 216px;
+  height: 77px;
+  margin: 20px auto;
+}
+.buttons_value {
+  display: inline;
+  line-height: 57px;
+  font-size: 48px;
   font-weight: 300;
 }
-.chart_container{
+.buttons_name {
+  display: inline;
+  line-height: 18px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.chart_container {
+  width: 1140px;
+  height: 392.1px;
   background-color: white;
   margin-bottom: 50px;
-  box-shadow: 0 0 10px 1px #c9c9c9;
-
+  display: flex;
+  align-items: flex-end;
+  border: 1px #eef2ff solid;
+  /* box-shadow: 0 0 10px 1px #c9c9c9; */
 }
-.chart{
+#mychart {
   position: relative;
-  bottom: -30px;
+  bottom: -32px;
+  color: #b0bac9;
+  background-image:  'linear-gradient(red, yellow)';
+
 }
 
-.filterContainer{
+.filterContainer {
   display: flex;
   justify-content: space-between;
 }
-.filter_area{
- display: flex;
- justify-content: flex-end;
- align-items: center;
+.info_head {
+  font-size: 28px;
+  font-weight: 300;
+  color: #2e384d;
+  width: 232px;
 }
-.filter_input{
-  line-height: 2rem;
-  border: 1px #2E5BFF solid;
+.filter_area {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.filter_input {
+  width: 200px;
+  height: 40px;
+  border: 1px #2e5bff solid;
   border-radius: 3px;
+  padding: 0;
 }
-.filter_button{
+.filter_button {
+  width: 200px;
+  height: 40px;
   text-align: left;
-  font-size: large;
-  margin-left: 8px;
-  line-height: 2rem;
-  width: 10rem;
-  border: 1px #2E5BFF solid;
-  background-color: #2E5BFF;
-  color: white;
+  margin-left: 13.5px;
+  border: 1px #2e5bff solid;
+  background-color: #2e5bff;
   border-radius: 3px;
+  padding: 0;
+  box-sizing: content-box;
 }
-.filter_button:hover{
+.filter_button p {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  margin: 0 24px;
+}
+.filter_button:hover {
   background-color: #5277fd;
-  border: none;
 }
 
-.price_button{
-  background-color: #2E5BFF;
-  color: white;
-
-}
-.percent_button{
-  background-color: #F7C137;
-  color: white;
+.table {
+  width: 1136px;
+  padding-left: 40px;
 }
 
-.time_button{
-  background-color: #8C54FF;
-  color: white;
+.tablehead {
+  width: 1136px;
+  box-sizing: border-box;
+  color: #bfc5d2;
+  font-size: 12px;
+  font-weight: 500;
+  height: 25px;
+}
+.tablehead td{
+  vertical-align: top;
 }
 
-.tablehead{
-  color: #B0BAC9;
-  display: flex;
-  padding-left: 20px;
-
-}
-.tablehead p{
-  width: 10rem;
-  padding-left: 10px;
-
+.id_data {
+  color: #8798ad;
 }
 
-#id_data{
- color: #707580;
-}
-
-.data_rows{
-  display: flex;
+.data_rows {
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px #eef2ff solid;
   background-color: #fff;
-  padding: 5px;
+  color: #2e384d;
+  height: 75px;
   margin-bottom: 10px;
 }
-
-.data_rows p{
-  width: 10rem;
-  padding-left: 10px;
+.data_rows:last-of-type{
+  border-bottom: none;
 }
 
-.data_body{
-  margin-bottom: 50px;
+#mytable{
+  border-collapse: separate;
+  border-spacing:0 10px;
+  width: 100%;
+  text-indent: 40px;
 }

@@ -6,13 +6,14 @@ const Price = () => {
       );
       let dollarUSLocale = Intl.NumberFormat('en-US')
       return (
-        <div className="price_button">
+        <div className="price_button_container">
           {error ? (
             <h2>error...</h2>
           ) : (
-            <div>
-                <h2>{dollarUSLocale.format(parseInt(response?.price))}</h2>
-                <p>Current Average Price</p>
+            <div className="price_button">
+                <p className='buttons_value'>{dollarUSLocale.format(parseInt(response?.price))}</p>
+                <br />
+                <p className='buttons_name'>Current Average Price</p>
             </div>
             )
           }

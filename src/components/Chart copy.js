@@ -6,20 +6,7 @@ import moment from "moment";
 const LineChart = () => {
   let timeX = [];
   let priceY = [];
-  let width, height, gradient;
-  function getGradient(ctx, chartArea) {
-    const chartWidth = chartArea.right - chartArea.left;
-    const chartHeight = chartArea.bottom - chartArea.top;
-    if (gradient === null || width !== chartWidth || height !== chartHeight) {
-      width = chartWidth;
-      height = chartHeight;
-      gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
-      gradient.addColorStop(0, "rgba(140,84,255,0.001)");
-      gradient.addColorStop(1, "rgba(140,84,255,0.1)");
-    }
 
-  return gradient;
-}
   const { response } = useFetch(
     `https://api.binance.com/api/v3/klines?interval=1w&symbol=BTCUSDT&limit=14`
   );
@@ -36,15 +23,8 @@ const LineChart = () => {
         label: "Price",
         data: priceY,
         fill: true,
-        backgroundColor: function(context) {
-          const chart = context.chart;
-          const {ctx, chartArea} = chart;
-  
-          if (!chartArea) {
-            return null;
-          }
-          return getGradient(ctx, chartArea);
-        },
+        backgroundColor: "rgba(140,84,255,0.1)",
+        // backgroundImage:  'linear-gradient(#8C54FF, #8C54FF)',
         borderColor: "#8C54FF",
         pointBackgroundColor: "white",
         pointBorderColor: "#8C54FF",

@@ -7,7 +7,7 @@ const Buttons = () => {
   return (
     <div>
       <div className='dashboard'>
-        <h1>Dashboard</h1>
+        <p>Dashboard</p>
       </div>
       <div className="buttons">
         <Price />

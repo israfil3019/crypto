@@ -5,13 +5,14 @@ const Percent = () => {
         `https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT`
       );
       return (
-        <div className="percent_button">
+        <div className="percent_button_container">
           {error ? (
             <h2>error...</h2>
           ) : (
-            <div>
-                <h2>%{parseInt(response?.priceChangePercent)}</h2>
-                <p>Price Change Percent</p>
+            <div className="percent_button">
+                <p className='buttons_value'>%{parseInt(response?.priceChangePercent)}</p>
+                <br />
+                <p className='buttons_name'>Price Change Percent</p>
             </div>
             )
           }

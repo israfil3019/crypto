@@ -41,7 +41,7 @@ const Info = () => {
       ) : (
         <div className="info_table">
           <div className="filterContainer">
-            <h1>Recent Trades List</h1>
+            <h2 className="info_head">Recent Trades List</h2>
 
             <form className="filter_area" onSubmit={handleSearch}>
               <input
@@ -51,32 +51,30 @@ const Info = () => {
                 className="filter_input"
               />
               <button type="submit" className="filter_button">
-                Filter
+                <p>Filter</p>
               </button>
             </form>
           </div>
-          <div>
-            <div>
-              <div className="tablehead">
-                <p>ID</p>
-                <p>PRICE</p>
-                <p>QTY</p>
-                <p>QUOTEQTY</p>
-                <p>TIME</p>
-              </div>
-            </div>
+          <div classname="table">
+            <table id="mytable">
+              <tr className="tablehead">
+                <td>ID</td>
+                <td>PRICE</td>
+                <td>QTY</td>
+                <td>QUOTEQTY</td>
+                <td>TIME</td>
+              </tr>
 
-            <div className="data_body">
               {response?.map((filtered, index) => (
-                <div key={index} className="data_rows">
-                  <p id="id_data">#{filtered.id}</p>
-                  <p>{parseInt(filtered.price)} $</p>
-                  <p>{filtered.qty}</p>
-                  <p>{filtered.quoteQty}</p>
-                  <p>{moment(filtered.time).format("YYYY-MM-DD HH:mm:ss")}</p>
-                </div>
+                <tr key={index} className="data_rows">
+                  <td className="id_data">#{filtered.id}</td>
+                  <td>{parseInt(filtered.price)} $</td>
+                  <td>{filtered.qty}</td>
+                  <td>{filtered.quoteQty}</td>
+                  <td>{moment(filtered.time).format("YYYY-MM-DD HH:mm:ss")}</td>
+                </tr>
               ))}
-            </div>
+            </table>
           </div>
         </div>
       )}
