@@ -79,8 +79,7 @@
   /* box-shadow: 0 0 10px 1px #c9c9c9; */
 }
 #mychart {
-  position: relative;
-  bottom: -32px;
+
   color: #b0bac9;
   background-image:  'linear-gradient(red, yellow)';
 
@@ -103,6 +102,8 @@
   margin-bottom: 30px;
 }
 .filter_input {
+  text-indent: 8px;
+  font-size: large;
   width: 200px;
   height: 40px;
   border: 1px #2e5bff solid;
